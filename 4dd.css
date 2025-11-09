@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #8B4513, #D2691E);
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    color: #8B4513;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #666;
+    font-size: 1.2em;
+}
+
+.excavation-area {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#excavationCanvas {
+    border: 5px solid #654321;
+    border-radius: 10px;
+    background: #8B4513;
+    cursor: crosshair;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.progress-bar {
+    position: relative;
+    width: 800px;
+    height: 30px;
+    background: #ddd;
+    border-radius: 15px;
+    margin: 20px auto;
+    overflow: hidden;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #FFD700, #FFA500);
+    width: 0%;
+    transition: width 0.1s ease;
+    border-radius: 15px;
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.artifact-info {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px 0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.artifact-info h2 {
+    color: #8B4513;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.artifact-info img {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 10px;
+    margin: 15px 0;
+    border: 3px solid #8B4513;
+}
+
+.artifact-details {
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px 0;
+    text-align: left;
+}
+
+.artifact-details p {
+    margin: 8px 0;
+    font-size: 1.1em;
+}
+
+.artifact-info button {
+    background: #8B4513;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.artifact-info button:hover {
+    background: #A0522D;
+}
+
+.stats {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.stats h3 {
+    color: #8B4513;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.stats p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #555;
+}
+
+.excavation-particles {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #8B4513;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: particle-fall 1s ease-out forwards;
+}
+
+@keyframes particle-fall {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.5);
+    }
+}

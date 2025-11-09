@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam Machines Excavation Site</title>
+    <link rel="stylesheet" href="4dd.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏺 Usage of Steam in Ancient Times</h1>
+            <p>Hold down the left mouse button to excavate and discover ancient artifacts!</p>
+        </header>
+        
+        <div class="excavation-area">
+            <canvas id="excavationCanvas" width="800" height="600"></canvas>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+                <span class="progress-text" id="progressText">Click and hold to excavate</span>
+            </div>
+        </div>
+        
+        <div class="artifact-info" id="artifactInfo" style="display: none;">
+            <h2 id="artifactTitle"></h2>
+            <img id="artifactImage" src="" alt="">
+            <p id="artifactDescription"></p>
+            <div class="artifact-details">
+                <p><strong>Civilization:</strong> <span id="artifactCivilization"></span></p>
+                <p><strong>Period:</strong> <span id="artifactPeriod"></span></p>
+                <p><strong>Significance:</strong> <span id="artifactSignificance"></span></p>
+            </div>
+            <button onclick="closeArtifactInfo()">Continue Excavating</button>
+        </div>
+        
+        <div class="stats">
+            <h3>Excavation Progress</h3>
+            <p>Artifacts Found: <span id="artifactsFound">0</span></p>
+            <p>Excavation Progress: <span id="excavationProgress">0%</span></p>
+        </div>
+    </div>
+    
+    <script src="4d.js"></script>
+</body>
+</html>
